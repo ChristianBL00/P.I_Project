@@ -1,4 +1,4 @@
-# Lab do Iuri
+# TRADEFY - Conhça o projeto que amplia o acesso de esportes e conecta pessoas.
 
 Ambiente didático para conceitos de **Segurança da Informação** e **redes**: dashboard com mini-aplicações interativas (criptografia, hashes, DDoS, modelo TCP/IP e mais).
 
@@ -8,10 +8,9 @@ Ambiente didático para conceitos de **Segurança da Informação** e **redes**:
 
 | Tecnologia | Uso |
 |------------|-----|
-| **Next.js 16** (App Router) | Framework React com API Routes |
-| **Tailwind CSS 4** | Estilização (tema dark, estética terminal/cybersecurity) |
-| **Lucide React** | Ícones |
-| **TypeScript** | Tipagem |
+| **HTML** | Front-end |
+| **CSS** | Estilização |
+| **JavaScript** | Back-end e Scripts |
 
 ---
 
@@ -76,28 +75,6 @@ sandboxsec/
 ├── tsconfig.json
 └── README.md
 ```
-
----
-
-## Deploy (Railway)
-
-1. Crie um projeto no [Railway](https://railway.app) e conecte este repositório (GitHub/GitLab).
-2. O Railway detecta Next.js e usa por padrão:
-   - **Build:** `npm run build` (ou `npx next build`)
-   - **Start:** `npm run start` (ou `npx next start`)
-3. Não é necessário `railway.json` nem configuração extra; os scripts já estão no `package.json`.
-4. Defina a variável de ambiente `NODE_ENV=production` se quiser (geralmente já é definida).
-5. Após o deploy, a URL gerada serve a aplicação (incluindo as API routes).
-
-**Dica:** Se usar um domínio próprio, configure no painel do Railway em *Settings → Domains*.
-
----
-
-## Desenvolvimento
-
-- **Lint:** `npm run lint`
-- Criptografia e hashes usam a API nativa `crypto` do Node.js nas rotas em `app/api/`.
-- Código comentado para fins didáticos.
 
 ---
 
