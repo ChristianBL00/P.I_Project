@@ -1,6 +1,8 @@
 # TRADEFY - Conhça o projeto que amplia o acesso de esportes e conecta pessoas.
 
-Ambiente didático para conceitos de **Segurança da Informação** e **redes**: dashboard com mini-aplicações interativas (criptografia, hashes, DDoS, modelo TCP/IP e mais).
+A **Tradefy** é uma plataforma voltada ao compartilhamento e à reutilização de equipamentos esportivos. O projeto busca ampliar o acesso a artigos esportivos, permitindo que pessoas próximas possam emprestar e trocar equipamentos, como pranchas, bicicletas, raquetes, barracas e bolas.
+
+A proposta está alinhada ao **ODS 12 — Consumo e Produção Responsáveis**, incentivando o reaproveitamento de produtos e a redução do desperdício.
 
 ---
 
@@ -11,6 +13,8 @@ Ambiente didático para conceitos de **Segurança da Informação** e **redes**:
 | **HTML** | Front-end |
 | **CSS** | Estilização |
 | **JavaScript** | Back-end e Scripts |
+| **Font Awesome** | Ícones |
+| **VLibras** | Recurso de acessibilidade em Libras |
 
 ---
 
@@ -36,44 +40,34 @@ A raiz `/` redireciona para `/hashes`. Navegue pelo menu lateral para acessar ca
 
 ## Módulos
 
-| Rota | Módulo | Descrição |
-|------|--------|-----------|
-| `/hashes` | Laboratório de Hashes | MD5, SHA-1 e SHA-256 em tempo real; demonstração do efeito avalanche |
-| `/criptografia-simetrica` | Criptografia Simétrica | AES-256-GCM: cifrar/decifrar com chave secreta; erro ao trocar a chave na descriptografia |
-| `/criptografia-assimetrica` | Criptografia Assimétrica | RSA 2048: gerar par de chaves, cifrar com chave pública e decifrar com chave privada |
-| `/ddos` | Simulação de DDoS | Flood de requisições; toggle de rate limiting (WAF); medidor de saúde e contadores 200/429 |
-| `/redes` | Básico de Redes | Modelo TCP/IP (camadas clicáveis), analisador de MAC, IPv4 vs IPv6, TCP vs UDP, IP Spoofing |
+| Módulo | Descrição |
+|--------|-----------|
+| **Catálogo** | Visualização dos equipamentos esportivos disponíveis para compartilhamento |
+| **Busca** | Pesquisa de equipamentos por nome ou descrição |
+| **Categorias** | Organização dos equipamentos por modalidade esportiva |
+| **Filtros** | Filtragem dos equipamentos disponíveis |
+| **Negociação** | Solicitação de empréstimo ou troca de equipamentos |
+| **Datas** | Definição e validação do período de utilização |
+| **Seguro Tradefy** | Ativação ou desativação do seguro durante a negociação |
+| **Perfil** | Exibição das informações do usuário |
+| **Acessibilidade** | Integração com VLibras |
 
 ---
 
 ## Estrutura do projeto
 
 ```
-sandboxsec/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx                 # Redireciona para /hashes
-│   ├── globals.css
-│   ├── api/
-│   │   ├── hash/                # POST → MD5, SHA-1, SHA-256
-│   │   ├── crypto/symmetric/    # encrypt, decrypt (AES)
-│   │   ├── crypto/asymmetric/   # keys, encrypt, decrypt (RSA)
-│   │   └── ddos/target/         # GET (alvo do flood + rate limit)
-│   ├── hashes/
-│   ├── criptografia-simetrica/
-│   ├── criptografia-assimetrica/
-│   ├── ddos/
-│   └── redes/
-├── components/
-│   ├── ui/                      # Button, Card, Input, Textarea
-│   ├── layout/                  # Sidebar, DashboardLayout
-│   └── tools/                   # TheoryCard, HashLab, SymmetricCrypto, etc.
-├── lib/
-│   └── utils.ts
-├── package.json
-├── next.config.ts
-├── tsconfig.json
-└── README.md
+Tradefy/
+├── CSS/
+│    └── styles.css
+│── IMAGENS/
+│       ├── bannerHeader.png
+│       ├── Logo01.jpg
+│       ├── Logo02.jpg
+│       ├── LogoEmEscrita.png
+│       └── LogoEmEscrita2.png
+│── index.html
+└── script.js
 ```
 
 ---
