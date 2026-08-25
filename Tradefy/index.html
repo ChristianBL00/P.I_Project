@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tradefy — Comunidade Esportiva Compartilhada</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="Imagens/logo.jpg">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <script src="https://kit.fontawesome.com/45fba48a23.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+<header class="header">
+  
+<div class="container">
+<div class="header-content">
+        
+<a class="logo">
+<img src="IMAGENS/LogoEmEscrita2.png">
+</a>
+
+
+<div class="search-bar hidden-mobile">
+<i data-lucide="search" class="search-icon"></i>
+<input
+id="searchInput"
+type="text"
+placeholder="Buscar prancha, bike, barraca..."
+class="search-input"
+/>
+
+<button id="radiusBtn" class="radius-btn">
+<i class="fa-solid fa-location-dot" style="color: rgb(211, 3, 3);"></i>
+<span>5 km</span>
+</button>
+</div>
+
+<div class="header-actions">
+<button id="postItemBtn" class="btn-primary hidden-mobile">
+<i data-lucide="plus-circle" class="btn-icon"></i>
+<span>Anunciar Item</span>
+</button>
+
+<button id="postItemBtnMobile" class="btn-mobile-post visible-mobile">
+<i data-lucide="plus" class="btn-icon"></i>
+</button>
+
+<div class="user-profile">
+<img src="https://i.pravatar.cc/72?img=12" alt="Avatar" class="avatar" />
+<div class="profile-info hidden-mobile">
+<span class="profile-name">João Silva</span>
+<span class="profile-rating"><i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i> 4.9</span>
+</div>
+ </div>
+  </div>
+   </div>
+
+<div class="search-bar-mobile visible-mobile">
+<i data-lucide="search" class="search-icon"></i>
+<input type="text" placeholder="Buscar equipamento..." class="search-input" />
+<button class="radius-btn">
+<i class="fa-solid fa-location-dot" style="color: rgb(211, 3, 3);"></i>
+<span>5 km</span>
+</button>
+</div>
+</div>
+</header>
+
+
+<section class="hero">
+<div class="container">
+<div class="hero-content">
+        
+
+<div class="hero-text">
+<span class="badge">
+<i data-lucide="leaf" class="badge-icon"></i>
+Alinhado ao ODS 12 — Consumo e Produção Responsáveis
+</span>
+          
+<h1 class="hero-title">
+Sua Comunidade<br /> Esportiva <span class="highlight">Compartilhada.</span>
+</h1>
+          
+<p class="hero-description">
+Empreste, troque e reutilize pranchas, bikes, raquetes e barracas com pessoas perto de você.
+Cada equipamento reaproveitado é um passo a menos em direção ao desperdício.
+</p>
+          
+<a href="#catalogo" class="btn-primary-lg">
+Explorar Equipamentos
+<i data-lucide="arrow-right" class="btn-icon"></i>
+</a>
+</div>
+
+<img id=bannerHEAD src="IMAGENS/bannerHeader.png">
+       
+</div>
+</div>
+</div>
+</section>
+
+<section class="category-section">
+<div class="container">
+<div id="categoryBar" class="category-bar">
+<button class="category-pill active" data-category="todos">Todos</button>
+<button class="category-pill" data-category="surf">🏄‍♂️ Surf & Aquáticos</button>
+<button class="category-pill" data-category="ciclismo">🚴‍♂️ Ciclismo</button>
+<button class="category-pill" data-category="tenis">🎾 Tênis & Beach Tennis</button>
+<button class="category-pill" data-category="camping">⛺ Camping & Trilha</button>
+<button class="category-pill" data-category="coletivos">⚽ Esportes Coletivos</button>
+      </div>
+    </div>
+</section>
+
+  <!-- ======================= CATALOG ======================= -->
+  <main id="catalogo" class="main-catalog">
+    <div class="container">
+      <div class="catalog-header">
+        <div>
+          <h2 class="catalog-title">Equipamentos por perto</h2>
+          <p class="catalog-subtitle">Selecione uma categoria ou busque por um item específico</p>
+        </div>
+        <span id="resultCount" class="result-count hidden-mobile"></span>
+      </div>
+
+      <div id="itemsGrid" class="items-grid">
+        <!-- Cards renderizados via JavaScript -->
+      </div>
+
+      <p id="emptyState" class="empty-state hidden">
+        Nenhum equipamento encontrado nessa categoria. Tente outro filtro. 🔍
+      </p>
+    </div>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Logo Section -->
+        <div class="footer-logo-section">
+          <div class="footer-logo">
+            <i data-lucide="recycle" class="footer-icon"></i>
+            <span>Tradefy</span>
+          </div>
+          <p class="footer-tagline">Compartilhar esporte, conectar pessoas.</p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="footer-links">
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="#catalogo">Catálogo de Equipamentos</a></li>
+            <li><a href="#">Como Funciona</a></li>
+            <li><a href="#">Anunciar um Item</a></li>
+            <li><a href="#">Comunidades Locais</a></li>
+          </ul>
+        </div>
+
+        <!-- Transparency Section -->
+        <div class="footer-links">
+          <h4>Transparência</h4>
+          <ul>
+            <li><a href="#">Seguro Tradefy</a></li>
+            <li><a href="#">Sistema de Reputação</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Section -->
+        <div class="footer-social">
+          <h4>Redes Sociais</h4>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="ods-badge">
+          <i data-lucide="leaf"></i>
+          <span>Juntos pelo ODS 12: Consumo Responsável no Esporte</span>
+        </div>
+        <p class="footer-copyright">© 2026 Tradefy. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= MODAL ======================= -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div id="modalPanel" class="modal-panel">
+      
+      <!-- Modal Image -->
+      <img id="modalImage" src="" alt="" class="modal-image" />
+      <button id="modalCloseBtn" aria-label="Fechar" class="modal-close">
+        <i data-lucide="x"></i>
+      </button>
+     
+
+      <!-- Modal Content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle" class="modal-title"></h3>
+          <span id="modalOwnerRating" class="modal-rating"></span>
+        </div>
+
+        <p id="modalDescription" class="modal-description"></p>
+        <p id="modalModality" class="modal-modality"></p>
+
+        <!-- Form -->
+        <form id="proposalForm" class="proposal-form">
+          
+          <!-- Date Selection -->
+          <div class="form-group">
+            <label class="form-label">Período do empréstimo</label>
+            <div class="date-inputs">
+              <div class="input-group">
+                <label for="startDate" class="input-label">Início</label>
+                <input type="date" id="startDate" required class="form-input" />
+              </div>
+              <div class="input-group">
+                <label for="endDate" class="input-label">Fim</label>
+                <input type="date" id="endDate" required class="form-input" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Insurance Toggle -->
+          <div class="insurance-section">
+            <div class="insurance-info">
+              <i data-lucide="shield-check" class="insurance-icon"></i>
+              <div>
+                <p class="insurance-title">Seguro Tradefy Ativo</p>
+                <p class="insurance-text">Cobertura contra danos durante a negociação</p>
+              </div>
+            </div>
+            <button type="button" id="insuranceToggle" class="toggle-switch active" aria-pressed="true">
+              <span class="toggle-knob"></span>
+            </button>
+          </div>
+
+          <!-- Success Message -->
+          <div id="successMessage" class="success-message hidden">
+            <i data-lucide="check-circle-2"></i>
+            <span>Proposta enviada ao proprietário!</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="submitProposalBtn" class="btn-submit">
+            <i data-lucide="send"></i>
+            <span>Enviar Proposta</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- VLibras Accessibility -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
